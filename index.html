@@ -132,47 +132,113 @@
             box-shadow: 0 8px 16px rgba(93, 74, 114, 0.3);
         }
         @media (max-width: 900px) {
-            .profile {
-                flex-direction: column;
-                text-align: center;
-                gap: 3rem;
-            }
-            .text-content {
-                text-align: center;
-                max-width: 100%;
-            }
-            .profile-pic {
-                width: 320px;
-                height: 320px;
-            }
-        }
-        @media (max-width: 700px) {
-            .navbar {
-                padding: 1.2rem 2rem;
-                gap: 1.5rem;
-            }
-            .navbar a {
-                font-size: 1.1rem;
-                padding: 10px 15px;
+            .container {
+                max-width: 700px;
+                margin: 7rem auto 2rem;
             }
             h1 {
-                font-size: 2.4rem;
+                font-size: 2.2rem;
             }
             h2 {
                 font-size: 1.6rem;
             }
         }
-        @media (max-width: 500px) {
-            .navbar {
-                justify-content: center;
-                padding: 1rem 1.5rem;
-                gap: 1rem;
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
             }
-            .profile-pic {
-                width: 280px;
-                height: 280px;
+            .about-content {
+                padding: 1.5rem;
+            }
+            .certificates-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            }
+            .navbar {
+                padding: 12px 20px;
+                gap: 15px;
+            }
+            .navbar a {
+                font-size: 16px;
+                padding: 8px 12px;
             }
         }
+        @media (max-width: 600px) {
+            .container {
+                max-width: 90%;
+                margin: 6rem auto 2rem;
+            }
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+                margin: 1.5rem 0 1rem;
+            }
+            .certificates-gallery {
+                grid-template-columns: 1fr;
+            }
+            .certificate-img {
+                height: 180px;
+            }
+            .navbar {
+                justify-content: center;
+                padding: 10px 15px;
+                gap: 10px;
+            }
+            .navbar a {
+                font-size: 14px;
+                padding: 6px 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+            }
+            .about-content {
+                padding: 1.2rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+            .contact-btn {
+                padding: 10px 20px;
+                font-size: 13px;
+            }
+            .certificate-img {
+                height: 160px;
+                padding: 10px;
+            }
+            .certificate-info {
+                padding: 0.8rem;
+            }
+            .navbar {
+                gap: 8px;
+            }
+            .navbar a {
+                font-size: 13px;
+            }
+        }
+        @media (max-width: 380px) {
+            .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 8px 10px;
+                gap: 6px;
+            }
+            .navbar a {
+                font-size: 12px;
+                padding: 5px 8px;
+            }
+            .container {
+                margin-top: 7rem;
+            }
+        }
+
     </style>
 </head>
 <body>
