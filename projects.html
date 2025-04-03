@@ -11,17 +11,25 @@
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+        }
         body {
             background-color: #e6dff1;
             color: #4b3d60;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         .navbar {
             background-color: #d4c2e3;
-            padding: 1rem 2rem;
+            padding: 1rem;
             display: flex;
-            justify-content: flex-end;
-            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
             position: fixed;
             width: 100%;
@@ -32,12 +40,13 @@
             color: #3e2f5b;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
-            padding: 0.8rem 1.2rem;
+            font-size: 0.9rem;
+            padding: 0.5rem 0.8rem;
             border-radius: 8px;
             background-color: transparent;
             white-space: nowrap;
             position: relative;
+            transition: all 0.3s ease-in-out;
         }
         .navbar a::after {
             content: '';
@@ -47,7 +56,7 @@
             width: 0;
             height: 3px;
             background-color: #3e2f5b;
-            transition: width 0.3s ease;
+            transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
         }
         .navbar a:hover, .navbar .active {
             color: #ffffff;
@@ -61,11 +70,13 @@
         }
         .container {
             max-width: 900px;
-            margin: 7rem auto 3rem;
-            padding: 2rem;
+            width: 100%;
+            margin: 6rem auto 2rem;
+            padding: 1.5rem;
+            flex: 1;
         }
         h1 {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             color: #4b3d60;
             margin-bottom: 1.5rem;
             text-align: center;
@@ -83,26 +94,27 @@
         .project-card {
             background: #f1ebf8;
             border-radius: 15px;
-            padding: 2.5rem;
+            padding: 1.5rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             border-top: 4px solid #b5a0cc;
             margin-bottom: 2rem;
         }
         .project-title {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: #4b3d60;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
         .project-description {
             color: #5d4a7e;
             line-height: 1.7;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
         }
         .image-container {
-            width: 220px;
-            height: 220px;
+            width: 200px;
+            height: 200px;
             margin: 1.5rem auto;
-            padding: 20px;
+            padding: 15px;
             background: #f8f4ff;
             border-radius: 20px;
             display: flex;
@@ -114,11 +126,11 @@
         .project-image {
             width: 100%;
             height: auto;
-            max-width: 160px;
+            max-width: 140px;
         }
         .jar-container {
             text-align: center;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
         }
         .jar-button {
             display: inline-flex;
@@ -127,35 +139,39 @@
             gap: 0.8rem;
             background-color: #6d5a8e;
             color: white;
-            padding: 1.2rem 2.5rem;
+            padding: 1rem 2rem;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
             margin: 1rem;
             box-shadow: 0 4px 15px rgba(109, 90, 142, 0.3);
-            font-size: 1.1rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
         }
         .jar-button:hover {
             background-color: #5d4a72;
+            transform: translateY(-3px);
         }
         .note {
             background-color: #e9e1f5;
-            padding: 1.5rem;
+            padding: 1.2rem;
             border-radius: 10px;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
             color: #4b3d60;
             border-left: 4px solid #b5a0cc;
+            font-size: 0.95rem;
         }
         .note h3 {
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             color: #4b3d60;
+            font-size: 1.1rem;
         }
         .note ol, .note ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
+            margin-left: 1.2rem;
+            margin-bottom: 0.8rem;
         }
         .note li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
         .note code {
             background: #4b3d60;
@@ -163,141 +179,137 @@
             padding: 0.2rem 0.4rem;
             border-radius: 3px;
             font-family: monospace;
+            font-size: 0.9rem;
         }
         .download-link {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
             color: #6d5a8e;
             font-weight: 600;
             text-decoration: none;
+            font-size: 0.95rem;
         }
         .download-link:hover {
             text-decoration: underline;
         }
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
         }
         .feature-card {
             background: #f8f4ff;
-            padding: 1.5rem;
+            padding: 1.2rem;
             border-radius: 10px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.05);
             border-top: 3px solid #c5b3e0;
         }
         .feature-card h4 {
             color: #5d4a7e;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
+            font-size: 1.1rem;
         }
-        @media (max-width: 900px) {
+        .feature-card p {
+            font-size: 0.95rem;
+        }
+        @media (min-width: 600px) {
+            .navbar {
+                padding: 1rem 1.5rem;
+                gap: 1rem;
+                justify-content: flex-end;
+            }
+            .navbar a {
+                font-size: 1rem;
+                padding: 0.6rem 1rem;
+            }
             .container {
-                max-width: 700px;
                 margin: 7rem auto 2rem;
+                padding: 2rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .project-card {
+                padding: 2rem;
+            }
+            .project-title {
+                font-size: 1.7rem;
+            }
+            .project-description {
+                font-size: 1.1rem;
+            }
+            .image-container {
+                width: 220px;
+                height: 220px;
+                padding: 20px;
+            }
+            .project-image {
+                max-width: 160px;
+            }
+            .features-grid {
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 1.5rem;
+            }
+            .jar-button {
+                padding: 1.1rem 2.2rem;
+                font-size: 1.1rem;
+            }
+            .note {
+                padding: 1.5rem;
+                font-size: 1rem;
+            }
+            .note h3 {
+                font-size: 1.2rem;
+            }
+        }
+        @media (min-width: 900px) {
+            .container {
+                max-width: 900px;
+                margin: 8rem auto 3rem;
             }
             h1 {
                 font-size: 2.2rem;
             }
-            h2 {
-                font-size: 1.6rem;
-            }
-        }
-        @media (max-width: 768px) {
-            .container {
-                padding: 1.5rem;
-            }
-            .about-content {
-                padding: 1.5rem;
-            }
-            .certificates-gallery {
-                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            }
-            .navbar {
-                padding: 12px 20px;
-                gap: 15px;
-            }
-            .navbar a {
-                font-size: 16px;
-                padding: 8px 12px;
-            }
-        }
-        @media (max-width: 600px) {
-            .container {
-                max-width: 90%;
-                margin: 6rem auto 2rem;
-            }
-            h1 {
-                font-size: 2rem;
-                margin-bottom: 1.5rem;
-            }
-            h2 {
-                font-size: 1.4rem;
-                margin: 1.5rem 0 1rem;
-            }
-            .certificates-gallery {
-                grid-template-columns: 1fr;
-            }
-            .certificate-img {
-                height: 180px;
-            }
-            .navbar {
-                justify-content: center;
-                padding: 10px 15px;
-                gap: 10px;
-            }
-            .navbar a {
-                font-size: 14px;
-                padding: 6px 10px;
-            }
-        }
-        @media (max-width: 480px) {
-            .container {
-                padding: 1rem;
-            }
-            .about-content {
-                padding: 1.2rem;
-            }
-            h1 {
+            .project-title {
                 font-size: 1.8rem;
             }
-            p {
-                font-size: 0.95rem;
-                line-height: 1.6;
-            }
-            .contact-btn {
-                padding: 10px 20px;
-                font-size: 13px;
-            }
-            .certificate-img {
-                height: 160px;
-                padding: 10px;
-            }
-            .certificate-info {
-                padding: 0.8rem;
-            }
-            .navbar {
-                gap: 8px;
-            }
-            .navbar a {
-                font-size: 13px;
+            .features-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             }
         }
-        @media (max-width: 380px) {
+        @media (max-width: 400px) {
             .navbar {
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: 8px 10px;
-                gap: 6px;
+                padding: 0.8rem;
+                gap: 0.3rem;
             }
             .navbar a {
-                font-size: 12px;
-                padding: 5px 8px;
+                font-size: 0.8rem;
+                padding: 0.4rem 0.6rem;
             }
             .container {
-                margin-top: 7rem;
+                margin: 5.5rem auto 1.5rem;
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .project-card {
+                padding: 1.2rem;
+            }
+            .image-container {
+                width: 180px;
+                height: 180px;
+                padding: 15px;
+            }
+            .project-image {
+                max-width: 130px;
+            }
+            .jar-button {
+                padding: 0.9rem 1.8rem;
+                font-size: 0.95rem;
             }
         }
     </style>
@@ -310,28 +322,23 @@
         <a href="projects.html" class="active">Projects</a>
         <a href="contact.html">Contact</a>
     </nav>
-    
     <div class="container">
         <h1>Shopping Cart Application</h1>
-        
         <div class="project-card">
             <h2 class="project-title">Java Shopping System</h2>
             <p class="project-description">
                 A robust shopping cart application built with core Java principles featuring multiple product categories, 
                 automatic discount calculations, and interactive console interface.
             </p>
-            
             <div class="image-container">
                 <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Shopping Cart" class="project-image">
             </div>
-            
             <div class="jar-container">
                 <a href="ShoppingCart.jar" download class="jar-button">
                     Download Executable JAR
                 </a>
-                <p style="color: #6d5a8e; margin-top: 0.5rem;">File size: 1.4MB | Requires Java 8+</p>
+                <p style="color: #6d5a8e; margin-top: 0.5rem; font-size: 0.9rem;">File size: 1.4MB | Requires Java 8+</p>
             </div>
-            
             <div class="features-grid">
                 <div class="feature-card">
                     <h4>Product Categories</h4>
@@ -346,7 +353,6 @@
                     <p>Ensures valid product names and prices</p>
                 </div>
             </div>
-            
             <div class="note">
                 <h3>How to Run This Application</h3>
                 <ol>
