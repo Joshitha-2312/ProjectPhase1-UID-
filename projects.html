@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #e6dff1;
+            color: #4b3d60;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: #d4c2e3;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: #3e2f5b;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+            background-color: transparent;
+            white-space: nowrap;
+            position: relative;
+        }
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -6px;
+            width: 0;
+            height: 3px;
+            background-color: #3e2f5b;
+            transition: width 0.3s ease;
+        }
+        .navbar a:hover, .navbar .active {
+            color: #ffffff;
+            background-color: #a892c4;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .navbar a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 7rem auto 3rem;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 2.2rem;
+            color: #4b3d60;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+        h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #b5a0cc;
+            margin: 0.8rem auto;
+            border-radius: 2px;
+        }
+        .project-card {
+            background: #f1ebf8;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-top: 4px solid #b5a0cc;
+            margin-bottom: 2rem;
+        }
+        .project-title {
+            font-size: 1.8rem;
+            color: #4b3d60;
+            margin-bottom: 1.5rem;
+        }
+        .project-description {
+            color: #5d4a7e;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        .image-container {
+            width: 220px;
+            height: 220px;
+            margin: 1.5rem auto;
+            padding: 20px;
+            background: #f8f4ff;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(109, 90, 142, 0.1);
+            border: 2px solid #d4c2e3;
+        }
+        .project-image {
+            width: 100%;
+            height: auto;
+            max-width: 160px;
+        }
+        .jar-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .jar-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            background-color: #6d5a8e;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 1rem;
+            box-shadow: 0 4px 15px rgba(109, 90, 142, 0.3);
+            font-size: 1.1rem;
+        }
+        .jar-button:hover {
+            background-color: #5d4a72;
+        }
+        .note {
+            background-color: #e9e1f5;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            color: #4b3d60;
+            border-left: 4px solid #b5a0cc;
+        }
+        .note h3 {
+            margin-bottom: 1rem;
+            color: #4b3d60;
+        }
+        .note ol, .note ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .note li {
+            margin-bottom: 0.5rem;
+        }
+        .note code {
+            background: #4b3d60;
+            color: white;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .download-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            color: #6d5a8e;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .download-link:hover {
+            text-decoration: underline;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .feature-card {
+            background: #f8f4ff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border-top: 3px solid #c5b3e0;
+        }
+        .feature-card h4 {
+            color: #5d4a7e;
+            margin-bottom: 0.8rem;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0.8rem 1rem;
+                justify-content: center;
+                gap: 0.8rem;
+            }
+            .container {
+                margin: 6rem auto 2rem;
+                padding: 1.5rem;
+            }
+            .project-title {
+                font-size: 1.6rem;
+            }
+            .jar-button {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+            .image-container {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .project-card {
+                padding: 1.8rem;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            .navbar {
+                flex-wrap: wrap;
+                padding: 0.6rem;
+                gap: 0.5rem;
+            }
+            .container {
+                margin-top: 7rem;
+                padding: 1rem;
+            }
+            .jar-button {
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+            .image-container {
+                width: 180px;
+                height: 180px;
+                padding: 15px;
+            }
+            .project-image {
+                max-width: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <div class="container">
+        <h1>Shopping Cart Application</h1>
+        
+        <div class="project-card">
+            <h2 class="project-title">Java Shopping System</h2>
+            <p class="project-description">
+                A robust shopping cart application built with core Java principles featuring multiple product categories, 
+                automatic discount calculations, and interactive console interface.
+            </p>
+            
+            <div class="image-container">
+                <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Shopping Cart" class="project-image">
+            </div>
+            
+            <div class="jar-container">
+                <a href="ShoppingCart.jar" download class="jar-button">
+                    Download Executable JAR
+                </a>
+                <p style="color: #6d5a8e; margin-top: 0.5rem;">File size: 1.4MB | Requires Java 8+</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>Product Categories</h4>
+                    <p>5 specialized categories with different discount rates</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Cart Management</h4>
+                    <p>Add/remove products and calculate totals</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Input Validation</h4>
+                    <p>Ensures valid product names and prices</p>
+                </div>
+            </div>
+            
+            <div class="note">
+                <h3>How to Run This Application</h3>
+                <ol>
+                    <li><strong>Windows:</strong>
+                        <ol type="a">
+                            <li>Open Command Prompt (Win + R, type <code>cmd</code>, press Enter)</li>
+                            <li>Navigate to your JAR folder: <code>cd "C:\path\to\folder"</code></li>
+                            <li>Run: <code>java -jar ShoppingCart.jar</code></li>
+                        </ol>
+                    </li>
+                    <li><strong>Mac/Linux:</strong> Run <code>java -jar ShoppingCart.jar</code> in Terminal</li>
+                </ol>
+                <a href="ShoppingCart.jar" download class="download-link">
+                    Download ShoppingCart.jar
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
