@@ -132,174 +132,75 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 16px rgba(93, 74, 114, 0.3);
         }
-        @media (max-width: 1024px) {
-            .container {
-                max-width: 900px;
-            }
-            .profile-pic {
-                width: 260px;
-                height: 260px;
-            }
-            h1 {
-                font-size: 40px;
-            }
-            h2 {
-                font-size: 24px;
-            }
-            .quote {
-                padding: 28px;
-                font-size: 16px;
-            }
-        }
-        @media (max-width: 900px) {
-            .container {
-                max-width: 700px;
-                margin: 110px auto 32px;
-            }
-            h1 {
-                font-size: 32px;
-            }
-            .quote {
-                padding: 40px;
-            }
-        }
-        @media (max-width: 768px) {
-            .container {
-                padding: 40px;
-            }
-            .navbar {
-                padding: 12px 20px;
-                justify-content: center;
-                gap: 15px;
-            }
-            .navbar a {
-                font-size: 16px;
-                padding: 8px 12px;
-            }
-            h1 {
-                font-size: 32px;
-            }
-            h2 {
-                font-size: 24px;
-            }
-            .profile-pic {
-                width: 240px;
-                height: 240px;
-            }
-            .quote {
-                font-size: 16px;
-                padding: 18px;
-            }
-            .resume-btn {
-                padding: 16px 24px;
-                font-size: 16px;
-            }
-        }
-        @media (max-width: 600px) {
-            .container {
-                max-width: 90%;
-                margin: 96px auto 32px;
-            }
-            h1 {
-                font-size: 28px;
-                margin-bottom: 18px;
-            }
-            h2 {
-                font-size: 18px;
-                margin-bottom: 16px;
-            }
-            .quote {
-                font-size: 16px;
-                padding: 18px;
-                margin: 24px 0;
-            }
-            .navbar {
-                padding: 10px 15px;
-                gap: 10px;
-            }
-            .navbar a {
-                font-size: 14px;
-                padding: 6px 10px;
-            }
-            .profile-pic {
-                width: 220px;
-                height: 220px;
-            }
-        }
-        @media (max-width: 480px) {
-            .container {
-                padding: 18px;
-            }
-            h1 {
-                font-size: 20px;
-            }
-            .quote {
-                padding: 16px;
-            }
-            .navbar {
-                flex-wrap: wrap;
-                padding: 8px 10px;
-                gap: 8px;
-            }
-            .navbar a {
-                font-size: 13px;
-                padding: 5px 8px;
-            }
-            .profile-pic {
-                width: 200px;
-                height: 200px;
-            }
-        }
-        @media (max-width: 380px) {
-            .container {
-                margin-top: 110px;
-            }
-            .navbar a {
-                font-size: 12px;
-            }
-            h1 {
-                font-size: 24px;
-            }
-            h2 {
-                font-size: 18px;
-            }
-            .quote {
-                font-size: 16px;
-            }
-        }
-        @media (min-width: 900px) {
-            .profile {
-                flex-direction: row;
-                align-items: center;
-                gap: 48px;
-                text-align: left;
-                margin-bottom: 48px;
-            }
-            .text-content {
-                text-align: left;
-                max-width: 600px;
-            }
-            .profile-pic {
-                width: 320px;
-                height: 320px;
-            }
-        }
-        @media (min-width: 1200px) {
-            .profile {
-                gap: 80px;
-            }
-            .profile-pic {
-                width: 350px;
-                height: 350px;
-            }
-            h1 {
-                font-size: 48px;
-            }
-            .quote {
-                padding: 40px;
-                font-size: 18px;
-            }
-        }
+    @media (max-width: 900px) {
+      .navbar {
+        padding: 12px 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      .navbar a {
+        font-size: 16px;
+        padding: 8px 12px;
+      }
+      .container {
+        max-width: 90%;
+        margin: 110px auto 32px;
+        padding: 24px;
+      }
+      .profile {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+      }
+      .profile-pic {
+        width: 260px;
+        height: 260px;
+      }
+      h1 {
+        font-size: 36px;
+        text-align: center;
+      }
+      h2 {
+        font-size: 22px;
+        text-align: center;
+      }
+      .text-content {
+        text-align: center;
+      }
+      .quote {
+        font-size: 16px;
+        padding: 24px;
+      }
+    }
+    @media (max-width: 600px) {
+      .navbar {
+        padding: 10px 15px;
+        gap: 10px;
+      }
+      .navbar a {
+        font-size: 14px;
+        padding: 6px 10px;
+      }
+      .profile-pic {
+        width: 220px;
+        height: 220px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      .quote {
+        font-size: 15px;
+        padding: 18px;
+      }
+      .resume-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+      }
+    }
     </style>
 </head>
 <body>
