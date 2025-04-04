@@ -59,7 +59,7 @@
             width: 100%;
             left: 0;
         }
-        .container {
+        .box {
             max-width: 1200px;
             margin: 128px auto 48px;
             padding: 32px;
@@ -70,13 +70,13 @@
             color: #4b3d60;
             margin-bottom: 32px;
         }
-        .skills {
+        .my_skills {
             display: flex;
             justify-content: center;
             gap: 32px;
             flex-wrap: wrap;
         }
-        .skill-box {
+        .skill-table {
             background: #f1ebf8;
             padding: 32px;
             border-radius: 15px;
@@ -85,17 +85,17 @@
             transition: all 0.3s ease-in-out;
             border-top: 4px solid #b5a0cc;
         }
-        .skill-box:hover {
+        .skill-table:hover {
             background: #e3d6f1;
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(181, 160, 204, 0.4);
         }
-        .skill-box h2 {
+        .skill-table h2 {
             font-size: 24px;
             color: #4b3d60;
             margin-bottom: 24px;
         }
-        .skill-items {
+        .skill {
             background: #e9e1f5;
             padding: 16px;
             margin: 16px 0;
@@ -105,13 +105,13 @@
             font-weight: 600;
             transition: all 0.2s ease-in-out;
         }
-        .skill-items:hover {
+        .skill:hover {
             background: #b5a0cc;
             color: white;
             transform: scale(1.1);
         }
       @media (max-width: 1024px) {
-      .container {
+      .box {
         margin: 110px auto 32px;
         padding: 24px;
       }
@@ -119,7 +119,7 @@
         font-size: 32px;
         margin-bottom: 24px;
       }
-      .skill-box {
+      .skill-table {
         width: 280px;
         padding: 24px;
       }
@@ -134,7 +134,7 @@
       }
     }
     @media (max-width: 600px) {
-      .container {
+      .box {
         margin: 100px auto 24px;
         padding: 16px;
       }
@@ -142,16 +142,16 @@
         font-size: 25px;
         margin-bottom: 20px;
       }
-      .skill-box {
+      .skill-table {
         width: 100%;
         max-width: 320px;
         padding: 20px;
       }
-      .skill-box h2 {
+      .skill-table h2 {
         font-size: 20px;
         margin-bottom: 16px;
       }
-      .skill-items {
+      .skill {
         font-size: 16px;
         padding: 12px;
         margin: 10px 0;
@@ -176,25 +176,25 @@
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
     </nav>
-    <div class="container">
+    <div class="box">
         <h1>MY SKILLS</h1>
-        <div class="skills">
-            <div class="skill-box">
+        <div class="my_skills">
+            <div class="skill-table">
                 <h2>Frontend Development</h2>
-                <div class="skill-items">HTML</div>
-                <div class="skill-items">CSS</div>
-                <div class="skill-items">JavaScript</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
             </div>
-            <div class="skill-box">
+            <div class="skill-table">
                 <h2>Languages</h2>
-                <div class="skill-items">Java</div>
-                <div class="skill-items">Python</div>
+                <div class="skill">Java</div>
+                <div class="skill">Python</div>
             </div>
-            <div class="skill-box">
+            <div class="skill-table">
                 <h2>Tools & Technologies</h2>
-                <div class="skill-items">Git & GitHub</div>
-                <div class="skill-items">VS Code</div>
-                <div class="skill-items">Android Studio</div>
+                <div class="skill">Git & GitHub</div>
+                <div class="skill">VS Code</div>
+                <div class="skill">Android Studio</div>
             </div>
         </div>
     </div>
