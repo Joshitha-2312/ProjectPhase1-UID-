@@ -410,32 +410,29 @@ strong {
 }
 .contact-form {
     background: #f1ebf8;
-    padding: 32px;
+    padding: 16px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     border-top: 4px solid #b5a0cc;
 }
-
 .form {
-    margin-bottom: 32px;
-    text-align: left;
+     margin-bottom: 16px;
 }
-
 label {
-    display: block;
-    font-weight: 500;
-    color: #4b3d60;
-    margin-bottom: 8px;
+    font-size: 14px;
+ }
+.btn {
+    padding: 10px 20px;
+    font-size: 14px;
 }
-
 input, textarea {
     width: 100%;
-    padding: 14px;
+    padding: 10px;
     border: 2px solid #c5b3e0;
     border-radius: 8px;
     background-color: #f0ebf7;
     transition: all 0.3s ease;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 input:focus, textarea:focus {
@@ -447,7 +444,7 @@ input:focus, textarea:focus {
 
 textarea {
     resize: vertical;
-    min-height: 150px;
+    min-height: 100px;
 }
 
 .btn {
