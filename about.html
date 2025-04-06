@@ -20,13 +20,18 @@
             background-color: #d4c2e3;
             padding: 15px 30px;
             display: flex;
-            justify-content: flex-end;
-            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
             position: fixed;
             width: 100%;
             top: 0;
             left:0;
+            z-index: 1000;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
         }
         .navbar a {
             color: #3e2f5b;
@@ -58,6 +63,13 @@
         .navbar a:hover::after {
             width: 100%;
             left: 0;
+        }
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 22px;
+            color: #000000;
+            margin-right: 20px;
         }
         .box {
             max-width: 800px;
@@ -159,77 +171,96 @@
             text-decoration: none;
         }
         @media (max-width: 900px) {
-    .box {
-        max-width: 700px;
-        margin: 112px auto 32px;
-        padding: 24px;
-    }
-    h1 {
-        font-size: 32px;
-    }
-    h2 {
-        font-size: 24px;
-        margin: 24px 0 16px;
-    }
-    .navbar {
-        padding: 12px 24px;
-        gap: 16px;
-    }
-    .navbar a {
-        font-size: 16px;
-        padding: 8px 12px;
-    }
-    .certificates-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    }
-}
+            .box {
+                max-width: 700px;
+                margin: 112px auto 32px;
+                padding: 24px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            h2 {
+                font-size: 24px;
+                margin: 24px 0 16px;
+            }
+            .navbar {
+                padding: 12px 24px;
+            }
+            .name {
+                font-size: 20px;
+            }
+            .nav-links {
+                gap: 16px;
+            }
+            .navbar a {
+                font-size: 16px;
+                padding: 8px 12px;
+            }
+            .certificates-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            }
+        }
 
-@media (max-width: 480px) {
-    .box {
-        max-width: 90%;
-        margin-top: 96px;
-        padding: 16px;
-    }
-    h1 {
-        font-size: 28px;
-        margin-bottom: 24px;
-    }
-    h2 {
-        font-size: 20px;
-        margin: 24px 0 16px;
-    }
-    p {
-        font-size: 15px;
-        line-height: 1.6;
-    }
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        padding: 10px 16px;
-    }
-    .navbar a {
-        font-size: 14px;
-        padding: 6px 10px;
-    }
-    .certificate-img {
-        height: 160px;
-        padding: 12px;
-    }
-    .contact-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-}
+        @media (max-width: 480px) {
+            .box {
+                max-width: 90%;
+                margin-top: 120px;
+                padding: 16px;
+            }
+            h1 {
+                font-size: 28px;
+                margin-bottom: 24px;
+            }
+            h2 {
+                font-size: 20px;
+                margin: 24px 0 16px;
+            }
+            p {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                padding: 10px 16px;
+            }
+            .name {
+                font-size: 18px;
+                margin-bottom: 8px;
+                margin-right: 0;
+            }
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+                gap: 5px;
+            }
+            .navbar a {
+                font-size: 14px;
+                padding: 6px 10px;
+            }
+            .certificate-img {
+                height: 160px;
+                padding: 12px;
+            }
+            .contact-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <div class="name">Joshitha</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </nav>
     <div class="box">
         <h1>About Me</h1>
