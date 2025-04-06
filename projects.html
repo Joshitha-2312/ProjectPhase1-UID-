@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -24,13 +25,18 @@
             background-color: #d4c2e3;
             padding: 16px;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
+            align-items: center;
             gap: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
             position: fixed;
             width: 100%;
             top: 0;
             left:0;
+        }
+        .nav-links {
+            display: flex;
+            gap: 8px;
         }
         .navbar a {
             color: #3e2f5b;
@@ -62,6 +68,13 @@
         .navbar a:hover::after {
             width: 100%;
             left: 0;
+        }
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: #000000;
+            margin-left: 16px;
         }
         .box {
             max-width: 900px;
@@ -209,8 +222,8 @@
         .feature-list p {
             font-size: 15px;
         }
-        @media (max-width: 900px) {
-    .box {
+ @media (max-width: 900px) {
+     .box {
         max-width: 700px;
         margin: 112px auto 32px;
         padding: 24px;
@@ -227,11 +240,14 @@
     .navbar {
         padding: 16px 24px;
         gap: 12px;
-        justify-content: flex-end;
     }
     .navbar a {
         font-size: 15px;
         padding: 8px 12px;
+    }
+    .name {
+        font-size: 18px;
+        margin-left: 12px;
     }
     .image {
         width: 200px;
@@ -280,6 +296,18 @@
         gap: 10px;
         padding: 10px 16px;
     }
+    .nav-links {
+        justify-content: center;
+        width: 100%;
+        order: 2;
+    }
+    .name {
+        order: 1;
+        width: 100%;
+        text-align: center;
+        margin: 0 0 10px 0;
+        font-size: 16px;
+    }
     .navbar a {
         font-size: 14px;
         padding: 6px 10px;
@@ -312,11 +340,14 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html" class="active">Projects</a>
-        <a href="contact.html">Contact</a>
+        <div class="name">Joshitha</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </nav>
     <div class="box">
         <h1>Shopping Cart Application</h1>
