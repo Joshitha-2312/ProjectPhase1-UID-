@@ -419,7 +419,7 @@ strong {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     border-top: 4px solid #b5a0cc;
     width: 100%;
-    max-width: 800px; /* Increased from 700px */
+    max-width: 1200px; /* Increased from 700px */
     margin: 0 auto;
 }
 
@@ -458,7 +458,7 @@ textarea {
     min-height: 180px;
 }
 
-.form-group {
+.form {
     margin-bottom: 24px;
 }
 
