@@ -409,12 +409,13 @@ strong {
     font-size: 15px;
 }
 .contact-form {
-            background: #f1ebf8;
-            padding: 32px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-top: 4px solid #b5a0cc;
-        }
+    background: #f1ebf8;
+    padding: 32px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 4px solid #b5a0cc;
+    width:90%
+}
         .form {
             margin-bottom: 24px;
             text-align: left;
