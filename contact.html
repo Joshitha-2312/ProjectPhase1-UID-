@@ -19,10 +19,11 @@
         }
         .navbar {
             background-color: #d4c2e3;
-            padding: 16px 32px;
+            padding: 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
             position: fixed;
             width: 100%;
@@ -31,18 +32,18 @@
         }
         .nav-links {
             display: flex;
-            gap: 24px;
+            gap: 8px;
         }
         .navbar a {
             color: #3e2f5b;
             text-decoration: none;
             font-weight: 600;
             font-size: 16px;
-            padding: 14px 20px;
+            padding: 8px 14px;
             border-radius: 8px;
             background-color: transparent;
             position: relative;
-            transition: all 0.3s ease;
+            transition: all 0.3s ease-in-out;
         }
         .navbar a::after {
             content: '';
@@ -52,7 +53,7 @@
             width: 0;
             height: 3px;
             background-color: #3e2f5b;
-            transition: width 0.3s ease;
+            transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
         }
         .navbar a:hover, .navbar .active {
             color: #ffffff;
@@ -67,9 +68,9 @@
         .name {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
-            font-size: 22px;
+            font-size: 20px;
             color: #000000;
-            margin-right: 20px;
+            margin-left: 16px;
         }
         .box {
             max-width: 800px;
@@ -163,7 +164,7 @@
             }
             .name {
                 font-size: 20px;
-                margin-right: 15px;
+                margin-left: 12px;
             }
             .nav-links {
                 gap: 16px;
@@ -205,12 +206,17 @@
                 height: 36px;
             }
         }
-        @media (max-width: 600px) {
+        @media (max-width: 480px) {
             .navbar {
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 10px;
                 padding: 10px 16px;
+            }
+            .nav-links {
+                justify-content: center;
+                width: 100%;
+                order: 2;
             }
             .name {
                 order: 1;
@@ -219,15 +225,9 @@
                 margin: 0 0 10px 0;
                 font-size: 18px;
             }
-            .nav-links {
-                order: 2;
-                width: 100%;
-                justify-content: space-around;
-                gap: 5px;
-            }
             .navbar a {
                 font-size: 14px;
-                padding: 8px 12px;
+                padding: 6px 10px;
             }
             .box {
                 margin: 140px auto 20px;
