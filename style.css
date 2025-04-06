@@ -79,6 +79,13 @@ body {
 /* Common Content Styles */
 .box {
     max-width: 1200px;
+    margin: 110px auto 32px;
+    padding: 24px;
+    text-align: center;
+}
+
+.box1 {
+    max-width: 1200px;
     padding: 24px;
     text-align: center;
 }
@@ -556,6 +563,11 @@ textarea {
     }
     
     .box {
+        margin: 160px auto 24px;
+        padding: 16px;
+        max-width: 95%;
+    }
+    .box1 {
         padding: 16px;
         max-width: 95%;
     }
