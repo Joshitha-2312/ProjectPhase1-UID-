@@ -419,7 +419,7 @@ strong {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     border-top: 4px solid #b5a0cc;
     width: 100%;
-    max-width: 700px;
+    max-width: 800px; /* Increased from 700px */
     margin: 0 auto;
 }
 
@@ -457,6 +457,11 @@ textarea {
     resize: vertical;
     min-height: 180px;
 }
+
+.form-group {
+    margin-bottom: 24px;
+}
+
 .btn {
     background-color: #6d5a8e;
     color: white;
@@ -581,7 +586,7 @@ textarea {
     
     /* Contact Form - 1024px adjustments */
     .contact-form {
-        max-width: 600px;
+        max-width: 700px; /* Slightly reduced from 800px for this breakpoint */
         padding: 28px;
     }
     
