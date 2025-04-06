@@ -418,8 +418,8 @@ strong {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     border-top: 4px solid #b5a0cc;
-    width: 100%;
-    max-width: 1200px; /* Increased from 700px */
+    width: 90%;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -508,120 +508,19 @@ textarea {
     border-radius: 50%;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-    .box {
-        margin: 100px auto 32px;
-        padding: 24px;
-    }
-    
-    h1 {
-        font-size: 32px;
-    }
-    
-    h2 {
-        font-size: 24px;
-    }
-    
-    .navbar {
-        padding: 16px;
-    }
-    
-    .name {
-        font-size: 18px;
-        margin-left: 12px;
-    }
-    
-    .navbar a {
-        font-size: 15px;
-        padding: 8px 12px;
-    }
-    
-    .pic {
-        width: 260px;
-        height: 260px;
-    }
-    
-    .interests {
-        font-size: 16px;
-        padding: 24px;
-    }
-    
-    .skill-table {
-        width: 280px;
-        padding: 24px;
-    }
-    
-    .certificates-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    }
-    
-    .project-title {
-        font-size: 22px;
-    }
-    
-    .project-description {
-        font-size: 15px;
-    }
-    
-    .image {
-        width: 200px;
-        height: 200px;
-        padding: 16px;
-    }
-    
-    .project-image {
-        max-width: 130px;
-    }
-    
-    .features {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 20px;
-    }
-    
-    .file-button {
-        padding: 14px 28px;
-        font-size: 15px;
-    }
-    
-    /* Contact Form - 1024px adjustments */
+/* Laptop/Desktop (1024px and up) */
+@media (min-width: 1024px) {
     .contact-form {
-        max-width: 700px; /* Slightly reduced from 800px for this breakpoint */
-        padding: 28px;
+        max-width: 800px;
+        padding: 40px;
     }
     
     textarea {
-        min-height: 160px;
-    }
-    
-    .btn {
-        padding: 12px 28px;
-        min-width: 180px;
-    }
-    
-    .social-media a {
-        width: 42px;
-        height: 42px;
+        min-height: 200px;
     }
 }
 
-@media (max-width: 768px) {
-    .contact-form {
-        width: 90%;
-        max-width: 100%;
-        padding: 24px;
-    }
-    
-    textarea {
-        min-height: 150px;
-    }
-    
-    .btn {
-        width: 100%;
-        max-width: none;
-    }
-}
-
+/* Mobile (480px and below) */
 @media (max-width: 480px) {
     .navbar {
         flex-direction: column;
@@ -748,20 +647,10 @@ textarea {
         font-size: 14px;
     }
     
-    .steps {
-        padding: 18px;
-        font-size: 14px;
-    }
-    
-    .steps h3 {
-        font-size: 15px;
-    }
-    
-    /* Contact Form - 480px adjustments */
+    /* Contact Form Mobile Adjustments */
     .contact-form {
-        padding: 20px;
         width: 95%;
-        max-width: 100%;
+        padding: 20px;
     }
     
     .form {
