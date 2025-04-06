@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joshitha Nambakam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -25,11 +26,16 @@
             background-color: #d4c2e3;
             padding: 15px 30px;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
+            align-items: center;
             gap: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
             position: fixed;
             width: 100%;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
         }
         .navbar a {
             color: #3e2f5b;
@@ -61,6 +67,13 @@
         .navbar a:hover::after {
             width: 100%;
             left: 0;
+        }
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #000000;
+            margin-right: auto;
         }
         .box {
             max-width: 1200px;
@@ -135,9 +148,16 @@
     @media (max-width: 900px) {
       .navbar {
         padding: 12px 20px;
-        justify-content: center;
         flex-wrap: wrap;
         gap: 15px;
+      }
+      .name {
+        font-size: 20px;
+      }
+      .nav-links {
+        order: 2;
+        width: 100%;
+        justify-content: center;
       }
       .navbar a {
         font-size: 16px;
@@ -178,6 +198,12 @@
         padding: 10px 15px;
         gap: 10px;
       }
+      .name {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 10px 0;
+        font-size: 18px;
+      }
       .navbar a {
         font-size: 14px;
         padding: 6px 10px;
@@ -205,11 +231,14 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <div class="name">Joshitha</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </nav>
     <div class="box">
         <div class="info">
