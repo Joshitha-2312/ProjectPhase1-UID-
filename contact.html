@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Joshitha Nambakam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -20,13 +21,17 @@
             background-color: #d4c2e3;
             padding: 16px 32px;
             display: flex;
-            justify-content: flex-end;
-            gap: 24px;
+            justify-content: space-between;
+            align-items: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
             position: fixed;
             width: 100%;
             top: 0;
             left:0;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
         }
         .navbar a {
             color: #3e2f5b;
@@ -58,6 +63,13 @@
         .navbar a:hover::after {
             width: 100%;
             left: 0;
+        }
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 22px;
+            color: #000000;
+            margin-right: 20px;
         }
         .box {
             max-width: 800px;
@@ -147,9 +159,14 @@
         }
         @media (max-width: 1024px) {
         .navbar {
-            justify-content: center;
-            gap: 16px;
             padding: 12px 20px;
+        }
+        .name {
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        .nav-links {
+            gap: 16px;
         }
         .navbar a {
             font-size: 15px;
@@ -190,16 +207,27 @@
     }
     @media (max-width: 600px) {
         .navbar {
-            flex-wrap: wrap;
-            gap: 12px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
             padding: 10px 15px;
+        }
+        .name {
+            font-size: 18px;
+            margin-bottom: 8px;
+            margin-right: 0;
+        }
+        .nav-links {
+            width: 100%;
+            justify-content: space-between;
+            gap: 5px;
         }
         .navbar a {
             font-size: 14px;
             padding: 8px 12px;
         }
         .box {
-            margin: 90px auto 20px;
+            margin: 140px auto 20px;
             padding: 12px;
             max-width: 95%;
         }
@@ -240,11 +268,14 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html" class="active">Contact</a>
+        <div class="name">Joshitha</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
     </nav>
     <div class="box">
         <h1>CONTACT ME</h1>
