@@ -457,11 +457,6 @@ textarea {
     resize: vertical;
     min-height: 180px;
 }
-
-.form-group {
-    margin-bottom: 24px;
-}
-
 .btn {
     background-color: #6d5a8e;
     color: white;
