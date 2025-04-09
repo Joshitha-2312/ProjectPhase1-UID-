@@ -416,8 +416,6 @@ strong {
 .feature-list p {
     font-size: 15px;
 }
-
-/* Updated Contact Form Section */
 .contact-form {
     background: #f1ebf8;
     padding: 32px;
@@ -513,8 +511,6 @@ textarea {
     object-fit: contain;
     border-radius: 50%;
 }
-
-/* Laptop/Desktop (1024px and up) */
 @media (min-width: 1024px) {
     .contact-form {
         max-width: 800px;
@@ -525,8 +521,6 @@ textarea {
         min-height: 200px;
     }
 }
-
-/* Mobile (480px and below) */
 @media (max-width: 480px) {
     .navbar {
         flex-direction: column;
@@ -656,8 +650,6 @@ textarea {
         padding: 12px 20px;
         font-size: 14px;
     }
-    
-    /* Contact Form Mobile Adjustments */
     .contact-form {
         width: 95%;
         padding: 20px;
